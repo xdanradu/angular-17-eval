@@ -3,7 +3,7 @@ import {CustomAddToCartComponent} from "../../custom-add-to-cart.component";
 
 @Component({
   standalone: true,
-  selector: 'cart-page',
+  selector: 'plp-page',
   imports: [
     CustomAddToCartComponent
   ],

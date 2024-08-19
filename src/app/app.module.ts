@@ -3,15 +3,19 @@ import {BrowserModule, provideClientHydration, withEventReplay} from '@angular/p
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {EstFooter} from "./src/layout/footer/est-footer.component";
+import {EstHeader} from "./src/layout/header/est-header.component";
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    EstFooter,
+    EstHeader
+  ],
   providers: [
     provideClientHydration(withEventReplay())
   ],

@@ -1,10 +1,20 @@
-div {
-  height:400px;
+div.page {
   background-color: #dedede;
 }
 
-.placeholder-container {
-  width: 100%;
-  text-align: center;
-  background-color: gray;
+
+
+div.products-wrapper {
+  padding:20px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  background-color: #f1f1f1;
+  gap: 20px;
+
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+  }
 }
+
+

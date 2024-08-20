@@ -1,0 +1,16 @@
+<div class="product-card">
+  @defer {
+    <img [ngSrc]="product.src" height="100" width="100">
+  }
+  @placeholder(minimum 50ms) {
+    <div class="placeholder-container">
+      <img width="100" height="100" alt="lazy placeholder" src="https://placehold.co/100" />
+    </div>
+  }
+
+  <div>{{ product.name }}</div>
+  <div>{{ product.price }}</div>
+    <div>{{ product.id }}</div>
+
+  <custom-add-to-cart></custom-add-to-cart>
+</div>

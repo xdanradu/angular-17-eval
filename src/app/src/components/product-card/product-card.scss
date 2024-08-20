@@ -1,0 +1,16 @@
+div.product-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  background-color: white;
+  width: 120px;
+  border: 1px solid #aaa;
+  padding:16px;
+}
+
+div.placeholder-container {
+  width: 100%;
+  text-align: center;
+  background-color: gray;
+}

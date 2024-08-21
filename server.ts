@@ -4,6 +4,8 @@ import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import AppServerModule from './src/main.server';
+import fs from "fs";
+import https from "https";
 const compression = require('compression');
 
 // The Express app is exported so that it can be used by serverless Functions.
@@ -51,7 +53,21 @@ function run(): void {
   const port = process.env['PORT'] || 4202;
 
   // Start up the Node server
-  const server = app();
+  // const server = app();
+
+  let server;
+
+  if (process.argv && process.argv.includes('--ssl')) {
+    const privateKey = fs.readFileSync('src/ssl/cert.key');
+    const certificate = fs.readFileSync('src/ssl/cert.pem');
+    server = https.createServer({ key: privateKey, cert: certificate }, app());
+  } else {
+    server = app();
+  }
+
+
+
+
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });

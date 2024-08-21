@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port=4201",
+    "start": "ng serve --port=4201 --ssl",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:eStore": "node --inspect dist/e-store/server/server.mjs",
+    "serve:ssr:eStore": "node --inspect dist/e-store/server/server.mjs --ssl",
     "analyze-source-dev-treemap": "ng build -c development --stats-json && esbuild-visualizer --metadata ./dist/e-store/stats.json --filename ./dist/stats.html && npm run show-stats",
     "analyze-source-dev-sunburst": "ng build -c development --stats-json && esbuild-visualizer --metadata ./dist/e-store/stats.json --template sunburst --filename ./dist/stats.html && npm run show-stats",
     "analyze-source-prod-treemap": "ng build --stats-json && esbuild-visualizer --metadata ./dist/e-store/stats.json --filename ./dist/stats.html && npm run show-stats",

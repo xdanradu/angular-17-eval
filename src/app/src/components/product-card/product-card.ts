@@ -1,18 +1,25 @@
-import {Component, Input} from "@angular/core";
+import {ChangeDetectionStrategy, Component, inject, Input} from "@angular/core";
 import {NgOptimizedImage} from "@angular/common";
-import {AddToCart} from "../add-to-cart/add-to-cart";
+import { Product } from "../../models/product.model";
+import { CartService } from "../../state/cart.service";
 
 @Component({
   standalone: true,
   selector: 'product-card',
   imports: [
-    NgOptimizedImage,
-    AddToCart
+    NgOptimizedImage
   ],
   templateUrl: './product-card.html',
-  styleUrls: ['product-card.scss']
+  styleUrls: ['product-card.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductCardComponent {
   @Input()
-  product: any;
+  product: Product;
+
+  cartService = inject(CartService);
+
+  add() {
+    this.cartService.add(this.product);
+  }
 }

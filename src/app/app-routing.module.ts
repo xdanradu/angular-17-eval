@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'cart',
-    loadComponent: () => import('./src/pages/cart/cart.component').then(m => m.CartComponent)
+    loadComponent: () => import('./src/pages/cart/cart.page').then(m => m.CartPageComponent)
   },
   {
     path: 'plp',

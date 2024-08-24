@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {ChangeDetectionStrategy, Component} from "@angular/core";
 import {SeoService} from "../../seo/seo.component";
 import {AuthComponent} from "../../auth/auth.component";
 
@@ -9,6 +9,7 @@ import {AuthComponent} from "../../auth/auth.component";
     imports: [
         AuthComponent
     ],
-    providers: [SeoService]
+    providers: [SeoService],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomepageComponent {}

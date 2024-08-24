@@ -23,7 +23,14 @@ export function app(): express.Express {
   server.set('views', browserDistFolder);
 
   // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
+  server.get('/api/products', (req, res) => {
+    res.json([
+      {id: '1', name: 'iPhone 11', price: 1000, src: 'products/iphone11.webp'},
+      {id: '2', name: 'iPhone 12', price: 1200, src: 'products/iphone12.webp'},
+      {id: '3', name: 'iPhone 13', price: 1300, src: 'products/iphone13.webp'}
+    ]);
+  });
+
   // Serve static files from /browser
   server.get('**', express.static(browserDistFolder, {
     maxAge: '1y',
@@ -52,9 +59,6 @@ export function app(): express.Express {
 function run(): void {
   const port = process.env['PORT'] || 4202;
 
-  // Start up the Node server
-  // const server = app();
-
   let server;
 
   if (process.argv && process.argv.includes('--ssl')) {
@@ -65,11 +69,8 @@ function run(): void {
     server = app();
   }
 
-
-
-
   server.listen(port, () => {
-    console.log(`Node Express server listening on http://localhost:${port}`);
+    console.log(`Node Express server listening on https://localhost:${port}`);
   });
 }
 

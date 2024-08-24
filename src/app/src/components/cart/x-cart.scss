@@ -1,0 +1,29 @@
+.cart-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.circle {
+  width:20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: orange;
+  color: navy;
+  display: flex;
+  justify-content: center;
+}
+
+.beat-animation{
+  animation: beat .25s infinite alternate;
+}
+
+@keyframes beat{
+	to { 
+    transform: scale(2.5); 
+    background: white;}
+}
+
+a{
+  text-decoration: none;
+}
+

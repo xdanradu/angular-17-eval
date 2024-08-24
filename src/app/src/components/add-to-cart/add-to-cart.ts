@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {SeoService} from "../../seo/seo.component";
+import { Product } from '../../models/product.model';
 
 @Component({
   standalone: true,
@@ -9,8 +10,11 @@ import {SeoService} from "../../seo/seo.component";
   providers: [SeoService]
 })
 export class AddToCart {
+  @Input()
+  product: Product;
+
   add(event: Event): void {
-    event.stopPropagation();
-    console.log('Add children');
+
+
   }
 }

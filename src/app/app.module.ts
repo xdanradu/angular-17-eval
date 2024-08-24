@@ -19,7 +19,8 @@ import { provideHttpClient, withFetch} from "@angular/common/http";
   ],
   providers: [
     provideHttpClient(withFetch()),
-    provideClientHydration(withEventReplay())
+    // provideClientHydration(withEventReplay())
+    provideClientHydration()
   ],
   bootstrap: [AppComponent]
 })

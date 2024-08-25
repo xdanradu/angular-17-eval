@@ -2,9 +2,8 @@
   <h1>Cart page</h1>
 
   @for (item of cartService.items(); track item.name) {
-    <h3>{{ item.name }} {{item.count }} <button (click)="remove(item)">Remove</button></h3>
+    <h3>{{ item.name }} | {{item.count }} | {{item.count * item.price }}$ <button (click)="remove(item)">Remove</button></h3>
 
-    
     } @empty {
     <li>There are no products.</li>
     }

@@ -8,7 +8,7 @@ export class CartService {
   items = signal<CartItem[]>([]);
 
   totalValue = computed(() =>
-    this.items().reduce((sum, product) => sum + product.price, 0)
+    this.items().reduce((sum, item) => sum + item.price*item.count, 0)
   );
 
   count = computed(() => [...this.items()].length);

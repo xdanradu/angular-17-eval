@@ -1,16 +1,16 @@
 <div>
   <h1>Cart page</h1>
 
-  @for (item of items; track item.name) {
-    <h3>{{ item.name }} <button (click)="remove(item)">Remove</button></h3>
+  @for (item of cartService.items(); track item.name) {
+    <h3>{{ item.name }} {{item.count }} <button (click)="remove(item)">Remove</button></h3>
 
     
     } @empty {
     <li>There are no products.</li>
     }
 
-    @if(total) {
-      Total: {{total}}
+    @if(cartService.totalValue()) {
+      Total: {{cartService.totalValue()}}
     }
 
 </div>

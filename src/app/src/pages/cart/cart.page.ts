@@ -11,13 +11,10 @@ import { CartItem } from '../../models/product.model';
 export class CartPageComponent {
   
   cartService = inject(CartService);
-  items: CartItem[];
-  total: number;
 
   constructor(){
     effect(() => {
-      this.items = this.cartService.items();
-      this.total = this.cartService.totalValue();
+
     });
   }
 

@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, inject, Input} from "@angular/core";
 import {NgOptimizedImage} from "@angular/common";
 import { Product } from "../../models/product.model";
-import { CartService } from "../../state/cart.service";
+import { CartService } from "../../services/state/cart.service";
 
 @Component({
   standalone: true,

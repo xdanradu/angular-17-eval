@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, inject} from "@angular/core";
 import {AuthComponent} from "../../components/auth/auth.component";
-import { SeoDirective } from "../../seo/seo.directive";
+import { SeoDirective } from "../../services/seo/seo.directive";
 
 @Component({
     standalone: true,

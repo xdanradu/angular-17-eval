@@ -2,7 +2,7 @@ import {Directive, inject, Input, OnInit} from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 @Directive({
   standalone: true,
-  selector: '[seo]',
+  selector: '[seo]'
 })
 export class SeoDirective implements OnInit {
     @Input() seoTitle = '';

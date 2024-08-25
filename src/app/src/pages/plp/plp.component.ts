@@ -2,7 +2,7 @@ import {ChangeDetectionStrategy, Component} from "@angular/core";
 import {NgOptimizedImage} from "@angular/common";
 import {ProductCardComponent} from "../../components/product-card/product-card";
 import { Product } from "../../models/product.model";
-import { SeoDirective } from "../../seo/seo.directive";
+import { SeoDirective } from "../../services/seo/seo.directive";
 
 @Component({
   standalone: true,

@@ -1,15 +1,16 @@
-<div seo [seoTitle]="'Cart Page'">
-  <h1>Cart page</h1>
-
-  @for (item of cartService.items(); track item.name) {
-    <h3>{{ item.name }} | {{item.count }} | {{item.count * item.price }}$ <button (click)="remove(item)">Remove</button></h3>
-
-    } @empty {
-    <li>There are no products.</li>
-    }
-
-    @if(cartService.totalValue()) {
-      Total: {{cartService.totalValue()}}
-    }
-
-</div>
+<ng-container seo [seoTitle]="'Cart Page'">
+  <div >
+    <h1>Cart page</h1>
+  
+    @for (item of cartService.items(); track item.name) {
+      <h3>{{ item.name }} | {{item.count }} | {{item.count * item.price }}$ <button (click)="remove(item)">Remove</button></h3>
+  
+      } @empty {
+      <li>There are no products.</li>
+      }
+  
+      @if(cartService.totalValue()) {
+        Total: {{cartService.totalValue()}}
+      }
+  </div>
+</ng-container>

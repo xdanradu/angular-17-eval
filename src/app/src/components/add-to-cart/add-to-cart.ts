@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {SeoService} from "../../seo/seo.component";
+import {SeoService} from "../../services/seo/seo.component";
 import { Product } from '../../models/product.model';
 
 @Component({

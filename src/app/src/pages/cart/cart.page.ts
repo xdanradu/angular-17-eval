@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, effect, inject} from "@angular/core";
-import { CartService } from "../../state/cart.service";
+import { CartService } from "../../services/state/cart.service";
 import { CartItem } from '../../models/product.model';
-import { SeoDirective } from "../../seo/seo.directive";
+import { SeoDirective } from "../../services/seo/seo.directive";
 
 @Component({
   standalone: true,

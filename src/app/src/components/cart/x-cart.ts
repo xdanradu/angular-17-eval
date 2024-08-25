@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, effect, ElementRef, inject, Renderer2, ViewChild } from '@angular/core';
-import { CartService } from '../../state/cart.service';
+import { CartService } from '../../services/state/cart.service';
 import {RouterLink} from "@angular/router";
 
 @Component({

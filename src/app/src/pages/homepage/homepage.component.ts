@@ -1,15 +1,16 @@
-import {ChangeDetectionStrategy, Component} from "@angular/core";
-import {SeoService} from "../../seo/seo.component";
+import {ChangeDetectionStrategy, Component, inject} from "@angular/core";
 import {AuthComponent} from "../../components/auth/auth.component";
+import { SeoDirective } from "../../seo/seo.directive";
 
 @Component({
     standalone: true,
     selector: 'home-page',
     templateUrl: './homepage.component.html',
     imports: [
-        AuthComponent
+        AuthComponent,
+        SeoDirective
     ],
-    providers: [SeoService],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomepageComponent {}
+export class HomepageComponent {
+}

@@ -11,7 +11,9 @@ export class CartService {
     this.items().reduce((sum, item) => sum + item.price*item.count, 0)
   );
 
-  count = computed(() => [...this.items()].length);
+  count = computed(() => 
+    this.items().reduce((sum, item) => sum + item.count, 0)
+  );
 
   add(product: Product): void {
     this.items.update((items: CartItem[]) => {

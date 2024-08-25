@@ -1,9 +1,11 @@
+@use '../../../../../public/styles/general' as *;
+
 div.product-card {
   display: flex;
   flex-direction: column;
   text-align: center;
 
-  background-color: white;
+  background-color: $color-white;
   width: 150px;
 
   &:hover {
@@ -20,7 +22,7 @@ div.placeholder-container {
 
 .title {
   font-weight: 800;
-  font-size: 24px;
+  font-size: $font-size-24;
 }
 
 .price {
@@ -39,7 +41,7 @@ button {
   border: 0;
   width: 36px;
   height: 36px;
-  background-color: #ffd814;
+  background-color: $color-accent;
   color: black;
   border-radius: 36px;
   font-size: 18px;

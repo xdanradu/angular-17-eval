@@ -3,7 +3,15 @@
     <h1>Cart page</h1>
   
     @for (item of cartService.items(); track item.name) {
-      <h3>{{ item.name }} | {{item.count }} | {{item.count * item.price }}$ <button (click)="remove(item)">Remove</button></h3>
+      <div>
+        @defer {
+          <img [ngSrc]="item.src" height="50" width="50" alt="missing"/>
+          } @placeholder(minimum 50ms) {
+            <span></span>
+          }
+        
+        {{ item.name }} | {{item.count }} | {{item.count * item.price }}$ 
+        <button (click)="remove(item)">Remove</button></div>
   
       } @empty {
       <li>There are no products.</li>

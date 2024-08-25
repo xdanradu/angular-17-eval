@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component, effect, inject} from "@angular/core"
 import { CartService } from "../../services/state/cart.service";
 import { CartItem } from '../../models/product.model';
 import { SeoDirective } from "../../services/seo/seo.directive";
+import { NgOptimizedImage } from "@angular/common";
 
 @Component({
   standalone: true,
@@ -9,7 +10,7 @@ import { SeoDirective } from "../../services/seo/seo.directive";
   templateUrl: './cart.page.html',
   styleUrls: ['./x-cart-page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports:[SeoDirective]
+  imports:[SeoDirective, NgOptimizedImage]
 })
 export class CartPageComponent {
   

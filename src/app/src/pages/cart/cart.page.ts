@@ -7,6 +7,7 @@ import { SeoDirective } from "../../services/seo/seo.directive";
   standalone: true,
   selector: 'cart-page',
   templateUrl: './cart.page.html',
+  styleUrls: ['./x-cart-page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports:[SeoDirective]
 })

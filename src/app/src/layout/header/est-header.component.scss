@@ -20,3 +20,8 @@ a:hover {
   
   text-align: right;
 }
+
+.home {
+  font-size:26px;
+  &:hover{text-decoration: none;}
+}

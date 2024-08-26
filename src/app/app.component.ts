@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'projectName';
+  title = 'e-store';
   basesitesUrl =
     'https://localhost:9002/occ/v2/basesites?fields=FULL&country=nl&lang=en&curr=USD';
 

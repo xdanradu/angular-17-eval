@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {PdpComponent} from "./src/pages/pdp/pdp.component";
 
 const routes: Routes = [
   {
@@ -19,6 +20,9 @@ const routes: Routes = [
     loadComponent: () =>
       import('./src/pages/plp/plp.component').then((m) => m.PlpComponent),
   },
+  { path: 'product/:id',
+    loadComponent: () =>
+      import('./src/pages/pdp/pdp.component').then((m) => m.PdpComponent) },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 

@@ -5,6 +5,7 @@ import { Product } from "../../models/product.model";
 import { SeoDirective } from "../../services/seo/seo.directive";
 import {ProductService} from "../../services/product/product.service";
 import {ActivatedRoute} from "@angular/router";
+import {CartService} from "../../services/state/cart.service";
 
 @Component({
   standalone: true,
@@ -21,6 +22,7 @@ import {ActivatedRoute} from "@angular/router";
 export class PdpComponent implements OnInit {
 
   productService = inject(ProductService);
+  cartService = inject(CartService);
   product: Product;
 
   constructor(private route: ActivatedRoute) {}
@@ -29,5 +31,9 @@ export class PdpComponent implements OnInit {
     const productId = this.route.snapshot.paramMap.get('id') || '';
     console.log(productId);
     this.product = this.productService.getProduct(productId);
+  }
+
+  add(product: Product) {
+    this.cartService.add(product);
   }
 }

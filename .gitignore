@@ -6,8 +6,13 @@
 /out-tsc
 /bazel-out
 
+/api/dist
+/webapp/dist
+
+/webapp/.angular
+/webapp/.angular/cache
 # Node
-/node_modules
+*/node_modules
 npm-debug.log
 yarn-error.log
 
@@ -29,7 +34,7 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
+*/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage

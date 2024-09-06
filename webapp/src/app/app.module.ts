@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {EstFooter} from "./src/layout/footer/est-footer.component";
 import {EstHeader} from "./src/layout/header/est-header.component";
-import { provideHttpClient, withFetch} from "@angular/common/http";
+import {provideHttpClient, withFetch, withInterceptorsFromDi} from "@angular/common/http";
+import {interceptors} from "./src/interceptors";
 
 @NgModule({
   declarations: [
@@ -18,9 +19,10 @@ import { provideHttpClient, withFetch} from "@angular/common/http";
     EstHeader,
   ],
   providers: [
-    provideHttpClient(withFetch()),
+    ...interceptors,
+    provideHttpClient(withFetch(), withInterceptorsFromDi()),
     // provideClientHydration(withEventReplay())
-    provideClientHydration()
+    provideClientHydration(),
   ],
   bootstrap: [AppComponent]
 })

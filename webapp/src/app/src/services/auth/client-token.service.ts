@@ -33,6 +33,7 @@ export class ClientTokenService {
       return this.localStorage.getItem(LOCAL_STORAGE_AUTH_KEY) as string;
     } else {
       // load client token from BE
+      console.log('redirect to login, oauth, 3rd party auth service');
       return undefined;
     }
   }
@@ -43,5 +44,9 @@ export class ClientTokenService {
    */
   refreshClientToken(): Observable<ClientToken | null> {
     return of(null);
+  }
+
+  save(token: string) {
+    this.localStorage.setItem(LOCAL_STORAGE_AUTH_KEY, token);
   }
 }

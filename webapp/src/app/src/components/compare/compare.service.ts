@@ -20,7 +20,7 @@ export class CompareService {
         let rows= card.querySelectorAll('.row');
 
         for(let i=0;i<rows.length;i++) {
-            let height = rows[i].clientHeight;
+            let height = rows[i].clientOffset;
             tmp.push(height);
         }
 

@@ -68,7 +68,7 @@ import {
 
         setTimeout( ()=> {
             this.renderer.setStyle(this.container.nativeElement, 'opacity', `1`);
-        }, 0)
+        }, 500)
 
     }
 

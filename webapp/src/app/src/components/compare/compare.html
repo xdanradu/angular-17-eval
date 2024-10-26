@@ -1,0 +1,11 @@
+<div class="container" #container>
+    @for(product of products; track product.id) {
+
+            <div class="card">
+                <div class="row">{{product.name}}</div>
+                <div class="row">{{product.description}}</div>
+                <div class="row">{{product.price}}</div>
+                <div class="row">{{product.features}}</div>
+            </div>
+    }
+</div>
